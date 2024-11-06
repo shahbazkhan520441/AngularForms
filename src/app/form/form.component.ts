@@ -1,18 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { Console } from 'console';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [],
+  imports: [FormsModule], // Add FormsModule to imports here
   templateUrl: './form.component.html',
-  styleUrl: './form.component.css'
+  styleUrls: ['./form.component.css']
 })
-export class FormComponent{
+export class FormComponent {
 
+  
+  user = {
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: ''
+  };
 
-
-  submit(){
-    console.log("form submited")
+  submit() {
+    console.log("Form submitted", this.user);
   }
 }

@@ -1,27 +1,31 @@
 <div class="container"> 
-    <h1>user registartion</h1>
-    <form  (ngSubmit)="submit()">
-
-        <div class="form-group">
-            <label for="firstname">FirstName</label><br>
-            <input required minlength="2" maxlength="7" type="text" name="firstname" id="" class="form-control" ngModel>
-        </div>
-        <pre></pre>
-        <div class="form-group">
-            <label for="lastname">LastName</label><br>
-            <input type="text" name="lastname" id="" class="form-control" ngModel>
-        </div>
-        <pre></pre>
-        <div class="form-group">
-            <label for="email">Email</label><br>
-            <input type="text" name="email" id="" class="form-control" ngModel>
-        </div>
-        <pre></pre>
-        <div class="form-group">
-            <label for="password">Password</label><br>
-            <input type="text" name="password" id="" class="form-control" ngModel>
-        </div>
-        <pre></pre>
-        <button class="btn btn-primary" type="submit" >Submit</button>
+    <h1>User Registration</h1>
+    <form (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="firstname">First Name</label><br>
+        <input required minlength="2" maxlength="7" type="text" name="firstname" class="form-control" [(ngModel)]="user.firstname">
+      </div>
+      <pre></pre>
+  
+      <div class="form-group">
+        <label for="lastname">Last Name</label><br>
+        <input type="text" name="lastname" class="form-control" [(ngModel)]="user.lastname">
+      </div>
+      <pre></pre>
+  
+      <div class="form-group">
+        <label for="email">Email</label><br>
+        <input type="text" name="email" class="form-control" [(ngModel)]="user.email">
+      </div>
+      <pre></pre>
+  
+      <div class="form-group">
+        <label for="password">Password</label><br>
+        <input type="text" name="password" class="form-control" [(ngModel)]="user.password">
+      </div>
+      <pre></pre>
+  
+      <button class="btn btn-primary" type="submit">Submit</button>
     </form>
-</div>
+  </div>
+  
